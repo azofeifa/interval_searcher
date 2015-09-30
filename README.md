@@ -17,7 +17,7 @@ that overlap your point and an empty list if none overlap,
 
 [3] x = 3
 
-[4] T.searchPoint(x), if there is no interval
+[4] T.searchPoint(x)
 
 [5] x = (3,7)
 
