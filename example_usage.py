@@ -1,6 +1,6 @@
 import node
 
-OLD 	= False
+OLD 	= True
 NEW 	= True
 if NEW:
 	A 	= [(5,10), (10,15), (16,18), (25,30), (31,32)]
