@@ -5,8 +5,8 @@ NEW 	= True
 if NEW:
 	A 	= [(5,10), (10,15), (16,18), (25,30), (31,32)]
 	B 	= [(1,3), (10,12), (16,18), (18,22), (21,22), (60,70) ]
-	T 	= node.tree(A)
-	for b in B:
+	T 	= node.tree(B)
+	for b in A:
 		print b ,T.searchInterval(b)
 if OLD:
 	#============================================
