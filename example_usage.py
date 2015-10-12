@@ -85,7 +85,7 @@ print "---------------------------------------------"
 #I also wrote a plotter to show the venn diagram that depends 
 #only matplotlib
 V 							= ST.compute_venn(0,1, 2,  display=True )
-V 							= ST.compute_venn(0,  2,  display=False )
+V 							= ST.compute_venn(0,  2,  display=True )
 #===================================================================
 #go ahead and test on your on bed files
 

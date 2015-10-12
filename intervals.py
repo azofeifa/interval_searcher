@@ -250,7 +250,7 @@ class comparison:
 			F.gca().add_artist(circle1)
 			F.gca().add_artist(circle2)
 			F.gca().add_artist(circle3)
-			
+
 		else:
 			IGNORE 	= [i for i in range(len(self.intervals)) if i not in args  ] 
 			F 	= plt.figure(figsize=(5,5))
@@ -270,7 +270,10 @@ class comparison:
 			F.gca().add_artist(circle2)
 			ax1.legend([circle1, circle2], labels, loc=(0.8,0.1), fontsize=12)
 			
-			
+		ax1.set_xticklabels([])
+		ax1.set_yticklabels([])
+
+
 		plt.show()
 	
 
