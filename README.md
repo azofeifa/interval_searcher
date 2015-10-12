@@ -1,24 +1,29 @@
 # interval_searcher
-Constructs a simple interval tree from a list of python tuples of start and stop locations, does not support adding or deleting intervals from the tree.
+A wrapper class for various interval searching algorithms. Can take arbitrary number of lists of intervals and they may be overlaping (interval tree is constructed in this case)
 ##Usage
-To make you interval tree strucutre you need to have a list of tuples. The first element in the tuple is the start location the second element is the stop location, and the third element is optional but can be anything.
+[1] import intervals
+Each list must be of tuples of start and stop values, anything else in the tuple is saved in interval class as INFO
+[2] A 	= [(1,5, "A1"), (4,10, "A2"),  (13,15, "A3"), (32, 34, "A4"), (61,68, "A5")]
+[3] B 	= [(1,6, "B1"), (7,15, "B2"),  (16,17, "B3" ), (62,69, "B4") ]
+[4] C 	= [(2,6, "C1"), (18,20, "C2"),  (21,23, "C3"), (25, 29), (31, 35)]
+[5] D 	= [(2,7, "D1"), (12, 17, "D2"), (61,65, "D3")]
 
-[0] LST=[(1,5, "A"), (3,10, "B")...]
+[6] ST 	= intervals.comparison((A,B,C, D) )
 
-[1] import node
+[7] OVERLAPS_0_1 	  = ST.find_overlaps(0,1)
 
-[2] T=node.tree(LST)
+[8] OVERLAPS_0_1_2	= ST.find_overlaps(0,1,2)
 
-Once tree() is instantiated with your list, you can call searchPoint or searchInterval
-to ask whether or not an incoming
-point (single value) or interval (tuple of start, stop) overlaps any elements
-in your list. This will return all intervals
-that overlap your point and an empty list if none overlap, 
+[9] UNIQUE_2 	      = ST.get_isolated(2)
 
-[3] x = 3
+We can also compute all possible overlaps (i.e. venn diagram or more formally a powerset)
 
-[4] T.searchPoint(x)
+[10] V = ST.compute_venn(0,1, 2,3, display=False )
+[11] UNIQUE_2 = V.get_comparison(2)
+[12] ALL_NOT_MUTUAL_EXCLUSIVE_OVERLAPS 	= V.get_comparison(0,1,3)
 
-[5] x = (3,7)
+Turning display to true plots a venn diagram of the overlaping intervals althrough is only supported for two or three comparisons.
 
-[6] T.searchInterval(x)
+Please see example_usage.py for a quick tutorial
+
+
