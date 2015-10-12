@@ -2,10 +2,15 @@
 A wrapper class for various interval searching algorithms. Can take arbitrary number of lists of intervals and they may be overlaping (interval tree is constructed in this case)
 ##Usage
 [1] import intervals
+
 Each list must be of tuples of start and stop values, anything else in the tuple is saved in interval class as INFO
+
 [2] A 	= [(1,5, "A1"), (4,10, "A2"),  (13,15, "A3"), (32, 34, "A4"), (61,68, "A5")]
+
 [3] B 	= [(1,6, "B1"), (7,15, "B2"),  (16,17, "B3" ), (62,69, "B4") ]
+
 [4] C 	= [(2,6, "C1"), (18,20, "C2"),  (21,23, "C3"), (25, 29), (31, 35)]
+
 [5] D 	= [(2,7, "D1"), (12, 17, "D2"), (61,65, "D3")]
 
 [6] ST 	= intervals.comparison((A,B,C, D) )
