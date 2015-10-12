@@ -84,12 +84,12 @@ print "---------------------------------------------"
 #===================================================================
 #I also wrote a plotter to show the venn diagram that depends 
 #only matplotlib
-V 							= ST.compute_venn(0,1, 2,  display=False )
-V 							= ST.compute_venn(0,  2,  display=False )
+V 							= ST.compute_venn(0,1, 2,  display=True )
+V 							= ST.compute_venn(0,  2,  display=True )
 #===================================================================
 #go ahead and test on your on bed files
 
-REAL_INTERVALS 				= True
+REAL_INTERVALS 				= False
 if REAL_INTERVALS:
 	BED_FILE_DIRECTORY 	= "/Users/joazofeifa/Lab/gro_seq_files/"
 	BED_FILE_1 			= "Allen2014/EMG_out_files/Allen2014_DMSO2_3-4_bidirectional_hits_intervals.bed"
