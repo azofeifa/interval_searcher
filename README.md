@@ -24,7 +24,9 @@ Each list must be of tuples of start and stop values, anything else in the tuple
 We can also compute all possible overlaps (i.e. venn diagram or more formally a powerset)
 
 [10] V = ST.compute_venn(0,1, 2,3, display=False )
+
 [11] UNIQUE_2 = V.get_comparison(2)
+
 [12] ALL_NOT_MUTUAL_EXCLUSIVE_OVERLAPS 	= V.get_comparison(0,1,3)
 
 Turning display to true plots a venn diagram of the overlaping intervals althrough is only supported for two or three comparisons.
