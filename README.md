@@ -33,4 +33,8 @@ Turning display to true plots a venn diagram of the overlaping intervals althrou
 
 Please see example_usage.py for a quick tutorial
 
+![Alt text](https://github.com/azofeifa/interval_searcher/blob/master/FIG2.png)
+
+![Alt text](https://github.com/azofeifa/interval_searcher/blob/master/FIG.png)
+
 
