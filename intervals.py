@@ -115,9 +115,10 @@ class comparison:
 		overlaps 			= list()
 		for a in A:
 			FINDS 			= node_B.searchInterval((a.start, a.stop))
-			overlaps 	   += [(max(a.start, st), min(a.stop, sp), [f for f in F]+ [a]) for st, sp, F in FINDS]
-			overlaps.sort()
-		
+			if FINDS:
+				overlaps 	   += [(max(a.start, st), min(a.stop, sp), [f for f in F]+ [a]) for st, sp, F in FINDS]
+				overlaps.sort()
+			
 		return node.tree(overlaps)
 	def _get_overlaps_pairwase(self, A, B):
 		j,N 		= 0,len(B)
